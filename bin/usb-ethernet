@@ -1,0 +1,1 @@
+systemctl start netctl-ifplugd@enp0s20u9u3i5.service

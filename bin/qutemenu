@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Handle open -s && open -t with rofi
+
+#:bind o spawn --userscript ~/bin/qutemenu open
+#:bind O spawn --userscript ~/bin/qutemenu tab
+
+# If you would like to set a custom colorscheme/font use these dirs.
+# https://github.com/halfwit/dotfiles/blob/master/.config/dmenu/bemenucolors
+readonly confdir=${XDG_CONFIG_HOME:-$HOME/.config}
+
+CONFIG_DIR=${CONFIG_DIR:-$QUTE_CONFIG_DIR}
+CONFIG_DIR=${CONFIG_DIR:-$HOME/.config/qutebrowser}
+
+create_menu() {
+    # Check quickmarks
+    while read -r url; do
+        printf -- '%s\n' "$url"
+    done < "$CONFIG_DIR"/quickmarks
+
+    # Next bookmarks
+    while read -r url _; do
+        printf -- '%s\n' "$url"
+    done < "$CONFIG_DIR"/bookmarks/urls
+}
+
+get_selection() {
+    opts+=(-p 'Open:' -dmenu)
+    create_menu | rofi "${opts[@]}"
+}
+
+url=$(get_selection)
+url=${url/*http/http}
+
+# If no selection is made, exit (escape pressed, e.g.)
+[[ ! $url ]] && exit 0
+
+case $1 in
+    open) printf '%s' "open $url" >> "$QUTE_FIFO" || qutebrowser "$url" ;;
+    tab)    printf '%s' "open -t $url" >> "$QUTE_FIFO" || qutebrowser "$url"  ;;
+esac

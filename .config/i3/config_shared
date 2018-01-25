@@ -1,0 +1,182 @@
+set $ws1 "1:web"
+set $ws2 "2:editor"
+set $ws3 "3:term"
+set $ws4 "4:misc"
+set $ws5 "5:misc"
+set $ws6 "6:view"
+set $ws7 "7:term"
+set $ws8 "8:planning"
+set $ws9 "9:chat"
+set $ws10 "10:media"
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #285577 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #5f676a #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #222222 #222222 #dddddd #292d2e   #222222
+client.urgent           #900000 #900000 #ffffff #900000   #900000
+client.placeholder      #0c0c0c #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+set $mod Mod4
+
+font xft:DejaVu Sans 9, FontAwesome 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod 
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start rofi (a program launcher like dmenu)
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+F1 exec --no-startup-id rofi -show ssh
+bindsym $mod+p exec --no-startup-id rofi-pass
+bindsym $mod+o exec --no-startup-id ~/bin/qutemenu open
+bindsym $mod+q exec --no-startup-id rofi-surfraw
+bindsym $mod+z exec --no-startup-id rofi-locate
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+Escape exec --no-startup-id rofi-power
+bindsym Print exec --no-startup-id teiler
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+    bindsym $mod+Tab focus right
+
+    bindsym h     move left
+    bindsym j     move down
+    bindsym k     move up
+    bindsym l     move right
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+#change focus to monitor
+bindsym $mod+Control+h focus output left
+bindsym $mod+Control+l focus output right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+g split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+c focus child
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exit
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+	tray_output primary
+	status_command i3status | ~/bin/i3spotifystatus/pystatus.py
+	colors {
+		background #000000
+		statusline #ffffff
+		separator #666666
+
+		focused_workspace  #4c7899 #4c7899 #ffffff
+		active_workspace   #333333 #333333 #ffffff
+		inactive_workspace #333333 #333333 #888888
+		urgent_workspace   #2f343a #2f343a #ffffff
+		binding_mode       #2f343a #2f343a #ffffff
+	}
+}
+
+bindsym XF86Tools exec spotify
+bindsym XF86HomePage exec termite -e ranger
+bindsym XF86Calculator exec qalculate-gtk 
+bindsym XF86Mail exec qutebrowser https://inbox.google.com
+
+for_window [class="Spotify"] move to workspace $ws10
+
+exec --no-startup-id redshift-gtk
+exec --no-startup-id dropbox
+exec --no-startup-id ~/bin/privoxy-blocklist/privoxy-blocklist.sh &
+
+# for_window [window_role="pop-up"] floating enable
+# for_window [window_role="task_dialog"] floating enable
+
+# Media player controls
+bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
+hide_edge_borders both

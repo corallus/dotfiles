@@ -1,0 +1,20 @@
+set $screen1 "DisplayPort-0"
+set $screen2 "DisplayPort-1"
+
+workspace $ws1 output $screen1
+workspace $ws2 output $screen1
+workspace $ws3 output $screen1
+workspace $ws4 output $screen1
+workspace $ws5 output $screen2
+workspace $ws6 output $screen2
+workspace $ws7 output $screen2
+workspace $ws8 output $screen2
+workspace $ws9 output $screen2
+workspace $ws10 output $screen2
+
+exec --no-startup-id ~/.screenlayout/3.sh &
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
