@@ -99,8 +99,8 @@ URxvt.letterSpace: 	-1
 
 ! Fonts
 URxvt.allow_bold:       true
-URxvt*font: 		xft:DejaVu Sans Mono:pixelsize=12
-URxvt*boldFont: 	xft:DejaVu Sans Mono:bold:pixelsize=12
+URxvt*font: 		xft:DejaVu Sans Mono for Powerline:size=12
+URxvt*boldFont: 	xft:DejaVu Sans Mono for Powerline:bold:size=12
 
 ! Scrollbar
 URxvt.scrollStyle:      rxvt

@@ -13,7 +13,6 @@ Plugin 'mxw/vim-jsx'
 Plugin 'nvie/vim-flake8'
 Plugin 'dracula/vim'
 Plugin 'francoiscabrol/ranger.vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -42,6 +41,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nmap <F8> ::TagbarToggle<CR>
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -49,5 +50,6 @@ set foldlevel=99
 set laststatus=2
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
 
 let g:jsx_ext_required = 0
