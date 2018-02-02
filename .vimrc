@@ -11,9 +11,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'nvie/vim-flake8'
-Plugin 'dracula/vim'
 Plugin 'francoiscabrol/ranger.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'sukima/xmledit'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,3 +55,13 @@ let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts = 1
 
 let g:jsx_ext_required = 0
+
+au BufNewFile,BufRead *.js,*.html,*.css,.jsx setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<F7>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
