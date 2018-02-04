@@ -99,8 +99,8 @@ URxvt.letterSpace: 	-1
 
 ! Fonts
 URxvt.allow_bold:       true
-URxvt*font: 		xft:DejaVu Sans Mono for Powerline:size=12
-URxvt*boldFont: 	xft:DejaVu Sans Mono for Powerline:bold:size=12
+URxvt*font: 		xft:DejaVu Sans Mono for Powerline:size=11
+URxvt*boldFont: 	xft:DejaVu Sans Mono for Powerline:bold:size=11
 
 ! Scrollbar
 URxvt.scrollStyle:      rxvt
@@ -109,7 +109,7 @@ URxvt.scrollBar:        false
 ! Perl extensions
 URxvt.perl-ext-common:  default,matcher
 URxvt.matcher.button:   1
-URxvt.urlLauncher:      qutebrowser
+URxvt.urlLauncher:      /usr/bin/xdg-open
 
 ! Cursor
 URxvt.cursorBlink:      true
