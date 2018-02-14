@@ -6,7 +6,7 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
+rofi.ssh-command: {terminal} -e {ssh-client} {host}
 rofi.modi: window,run,ssh,drun
 
 ! ------------------------------------------------------------------------------

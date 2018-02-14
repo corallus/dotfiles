@@ -1,5 +1,6 @@
 set $screen1 "DisplayPort-0"
 set $screen2 "DisplayPort-1"
+set $screen3 "DVI-0"
 
 workspace $ws1 output $screen1
 workspace $ws2 output $screen1
@@ -11,6 +12,7 @@ workspace $ws7 output $screen2
 workspace $ws8 output $screen2
 workspace $ws9 output $screen2
 workspace $ws10 output $screen2
+workspace $ws10 output $screen3
 
 exec --no-startup-id ~/.screenlayout/3.sh &
 
