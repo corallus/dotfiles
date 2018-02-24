@@ -35,7 +35,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+F1 exec --no-startup-id rofi -show ssh
 bindsym $mod+p exec --no-startup-id rofi-pass
-bindsym $mod+o exec --no-startup-id ~/bin/qutemenu open
+bindsym $mod+o exec --no-startup-id qutemenu open
 bindsym $mod+z exec --no-startup-id rofi-locate
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+Escape exec --no-startup-id rofi-power
