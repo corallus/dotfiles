@@ -95,11 +95,3 @@ fun! RelatedFile(file)
     echo "Cant determine where relative file is : " . a:file
     return ''
 endfun
-
-fun SetAppDir()
-    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        let g:last_relative_dir = expand("%:h") . '/'
-        return ''
-    endif
-endfun
-autocmd BufEnter *.py call SetAppDir()
