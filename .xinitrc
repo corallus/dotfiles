@@ -41,4 +41,4 @@ fi
 
 export http_proxy="http://localhost:8118"
 
-exec i3 
+exec i3

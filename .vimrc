@@ -8,14 +8,16 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'StanAngeloff/php.vim'
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
+Plugin 'christoomey/vim-tmux-navigator'
+
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'nvie/vim-flake8'
 Plugin 'francoiscabrol/ranger.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sukima/xmledit'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -42,21 +44,11 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 nmap <F8> ::TagbarToggle<CR>
 
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
-
-set laststatus=2
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-let g:airline_powerline_fonts = 1
 
 let g:jsx_ext_required = 0
 

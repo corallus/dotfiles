@@ -1,6 +1,10 @@
-set $screen1 "DisplayPort-0"
-set $screen2 "DisplayPort-1"
-set $screen3 "DVI-0"
+# set $screen1 "DisplayPort-0"
+# set $screen2 "DisplayPort-1"
+# set $screen3 "DVI-0"
+
+set $screen1 "DP-1"
+set $screen2 "DP-2"
+set $screen3 "DVI-I-1"
 
 workspace $ws1 output $screen1
 workspace $ws2 output $screen1
