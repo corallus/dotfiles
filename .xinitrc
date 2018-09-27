@@ -34,11 +34,8 @@ fi
 
 if [ -n "$DISPLAY" ]; then
     export BROWSER="qutebrowser"
-    # export BROWSER="qutebrowser --backend webengine"
-else
-    export BROWSER=w3m
 fi
 
 export http_proxy="http://localhost:8118"
 
-exec i3 
+exec i3
