@@ -9,7 +9,7 @@
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
 # Type: Dict
-c.aliases = {'q': 'quit', 'w': 'session-save', 'wq': 'quit --save'}
+c.aliases = {'q': 'quit', 'w': 'session-save', 'wq': 'quit --save', 'mpv': 'spawn --userscript view_in_mpv'}
 
 # How to open links in an existing instance if a new one is launched.
 # This happens when e.g. opening a link from a terminal. See
