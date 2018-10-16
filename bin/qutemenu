@@ -21,6 +21,11 @@ create_menu() {
     while read -r url _; do
         printf -- '%s\n' "$url"
     done < "$CONFIG_DIR"/bookmarks/urls
+
+    # Next history
+    while read -r url _; do
+        printf -- '%s\n' "$url"
+    done < "$QUTE_DATA_DIR"/history
 }
 
 get_selection() {
