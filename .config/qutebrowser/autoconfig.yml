@@ -5,4 +5,4 @@ config_version: 2
 settings:
   content.register_protocol_handler:
     https://calendar.google.com/*: true
-    https://inbox.google.com/*: true
+    https://mail.google.com/*: true
