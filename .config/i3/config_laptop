@@ -1,3 +1,5 @@
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+
 # move workspace
 bindsym $mod+Shift+Left move workspace to output left
 bindsym $mod+Shift+Down move workspace to output down

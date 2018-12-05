@@ -165,7 +165,6 @@ bindsym XF86Mail exec qutebrowser https://inbox.google.com
 
 for_window [class="Spotify"] move to workspace $ws10
 
-exec --no-startup-id redshift-gtk
 exec --no-startup-id ~/bin/privoxy-blocklist/privoxy-blocklist.sh &
 
 # for_window [window_role="pop-up"] floating enable
