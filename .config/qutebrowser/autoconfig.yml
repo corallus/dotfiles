@@ -12,3 +12,6 @@ settings:
         d: spawn --userscript ~/bin/qutemenu open
   content.javascript.can_open_tabs_automatically:
     global: true
+  content.register_protocol_handler:
+    https://calendar.google.com/*: true
+    https://mail.google.com/*: true
