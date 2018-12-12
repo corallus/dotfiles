@@ -1,192 +1,158 @@
-a2ps
-alsa-utils
-arandr
-arc-gtk-theme
-arc-icon-theme
-atool
-autoconf
-automake
-bash
-binutils
-bison
-brother-hl3040cn
-bzip2
-chromium
-composer
-coreutils
-cower
-cryptsetup
-cups
-device-mapper
-dhcpcd
-diffutils
-dmenu
-docker
-dunst
-e2fsprogs
-exiv2
-fakeroot
-file
-filesystem
-filezilla
-findutils
-firefox
-flex
-gawk
-gcc
-gcc-fortran
-gcc-libs
-gettext
-gimp
-gist
-git
-glibc
-gnome-keyring
-graphviz
-grep
-gst-libav
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
-gvim
-gzip
-hdparm
-htop
-i3-wm
-i3lock
-i3status
-ifuse
-inetutils
-intel-ucode
-iproute2
-iputils
-iw
-jfsutils
-less
-libnotify
-libqalculate
-libtool
-licenses
-linux
-logrotate
-lvm2
-m4
-make
-man-db
-man-pages
-mariadb
-mdadm
-mlocate
-mpv
-nano
-netctl
-nodejs
-nodejs-less
-npm
-openconnect
-openssh
-pacaur
-pacman
-pass
-patch
-pciutils
-pcmciautils
-perl
-perl-file-mimeinfo
-php
-pkg-config
-powerline-fonts
-privoxy
-procps-ng
-psmisc
-pulseaudio
-pulseaudio-alsa
-python-bibtexparser
-python-gobject
-python-setuptools
-python-virtualenv
-python-xdg
-python2-pillow
-python2-pip
-python2-virtualenv
-qalculate-gtk
-qrencode
-qt5-webengine
-qt5-webengine-widevine
-qtpass
-qutebrowser
-ranger
-redshift
-reflector
-reiserfsprogs
-rmlint
-rofi-pass
-rofi-surfraw-git
-rsync
-rxvt-unicode
-s-nail
-scrot
-sed
-shadow
-spotify
-sudo
-sxiv
-sysfsutils
-systemd-sysvcompat
-tar
-teamviewer11
-teiler-git
-texinfo
-texlive-bibtexextra
-texlive-bin
-texlive-core
-texlive-fontsextra
-texlive-formatsextra
-texlive-games
-texlive-humanities
-texlive-latexextra
-texlive-music
-texlive-pictures
-texlive-pstricks
-texlive-publishers
-texlive-science
-tk
-transmission-qt
-ttf-dejavu
-ttf-font-awesome
-ttf-linex-fonts
-ttf-ms-fonts
-unzip
-usbmuxd
-usbutils
-util-linux
-vagrant
-vi
-vim-airline
-vim-ctrlp
-vim-fugitive
-vim-jedi
-vim-latexsuite
-vim-supertab
-vim-surround
-vim-syntastic
-vim-tagbar
-virtualbox
-wget
-which
-wpa_actiond
-wpa_supplicant
-x11-ssh-askpass
-xf86-video-ati
-xfsprogs
-xorg-server
-xorg-xev
-xorg-xinit
-xorg-xkill
-xorg-xprop
-xorg-xrandr
-xsel
-xterm
-yarn
-zathura-pdf-mupdf
+a2ps 4.14-8
+alsa-utils 1.1.7-1
+android-file-transfer 3.7-1
+angular-cli 7.1.0-1
+arandr 0.1.9-3
+arc-gtk-theme 20181022-1
+arc-icon-theme 20161122-2
+atool 0.39.0-6
+autoconf 2.69-5
+automake 1.16.1-1
+bash 4.4.023-1
+binutils 2.31.1-3
+bison 3.2-1
+brother-hl3040cn 1.1.2-4
+bzip2 1.0.6-8
+chromium 71.0.3578.80-1
+code 1.29.1-4
+coreutils 8.30-1
+cryptsetup 2.0.6-1
+cups 2.2.10-1
+curlftpfs 0.9.2-7
+device-mapper 2.02.183-1
+dhcpcd 7.0.8-1
+diffutils 3.6-2
+docker-compose 1.23.2-1
+dunst 1.3.2-1
+e2fsprogs 1.44.4-1
+exiv2 0.26-2
+fakeroot 1.23-1
+file 5.35-1
+filesystem 2018.8-1
+filezilla 3.39.0-1
+findutils 4.6.0-4
+firefox 64.0-1
+flex 2.6.4-2
+gawk 4.2.1-1
+gcc 8.2.1+20181127-1
+gcc-fortran 8.2.1+20181127-1
+gcc-libs 8.2.1+20181127-1
+gettext 0.19.8.1-3
+gimp 2.10.8-1
+gist 5.0.0-1
+git 2.20.0-1
+glibc 2.28-5
+gnome-keyring 1:3.28.2-1
+google-cloud-sdk 226.0.0-1
+grep 3.1-2
+gst-libav 1.14.4-1
+gst-plugins-bad 1.14.4-5
+gst-plugins-base 1.14.4-1
+gst-plugins-good 1.14.4-1
+gst-plugins-ugly 1.14.4-1
+gulp 4.0.0-1
+gvfs-mtp 1.38.1-1
+gvim 8.1.0570-1
+gzip 1.9-2
+hdparm 9.58-1
+htop 2.2.0-2
+i3-wm 4.16-1
+i3lock 2.11.1-1
+i3status 2.12-1
+ifuse 1.1.3-5
+inetutils 1.9.4-6
+inkscape 0.92.3-6
+intel-ucode 20180807.a-1
+iproute2 4.19.0-1
+iputils 20180629.f6aac8d-2
+iw 4.14-1
+jfsutils 1.1.15-6
+less 530-1
+libnotify 0.7.7-2
+libqalculate 2.8.2-1
+libtool 2.4.6+42+gb88cebd5-2
+licenses 20181104-1
+linux 4.19.8.arch1-1
+logrotate 3.14.0-1
+lvm2 2.02.183-1
+m4 1.4.18-2
+make 4.2.1-3
+man-db 2.8.4-1
+man-pages 4.16-2
+maven 3.6.0-1
+mdadm 4.0-2
+mencoder 38101-2
+mlocate 0.26.git.20170220-1
+mpv 1:0.29.1-5
+mtpfs 1.1-3
+nano 3.2-1
+npm 6.5.0-1
+nvm 0.33.11-1
+openshot 2.4.3-1
+openssh 7.9p1-1
+otf-font-awesome 5.5.0-1
+p7zip 16.02-5
+pacman 5.1.1-1
+pacman-contrib 1.1.0-1
+pass 1.7.3-1
+patch 2.7.6-7
+pciutils 3.6.2-1
+perl 5.28.1-1
+perl-file-mimeinfo 0.29-1
+pkgconf 1.5.4-1
+privoxy 3.0.26-3
+procps-ng 3.3.15-1
+psmisc 23.2-1
+pulseaudio 12.2-2
+pulseaudio-alsa 2-4
+python-setuptools 1:40.6.2-1
+python-xdg 0.26-2
+qalculate-gtk 2.8.2-1
+qrencode 4.0.2-1
+qt5-webengine 5.12.0-1
+qt5-webengine-widevine 1:66.0.3359.181-2
+qtpass 1.2.3-1
+qutebrowser 1.5.2-1
+ranger 1.9.2-1
+reflector 2018-2
+reiserfsprogs 3.6.27-2
+rofi 1.5.1-1
+rofi-pass 2.0.1-1
+rsync 3.1.3-1
+rxvt-unicode 9.22-7
+s-nail 14.9.11-1
+sed 4.5-1
+shadow 4.6-1
+spotify 1.0.92.390-1
+sudo 1.8.26-2
+sxiv 24-1
+sysfsutils 2.1.0-10
+systemd-sysvcompat 239.303-1
+tar 1.30-2
+teiler-git 506.a48733a-1
+texinfo 6.5-2
+tk 8.6.9-2
+tmux 2.8-1
+trizen 1:1.55-1
+ttf-dejavu 2.37-2
+unzip 6.0-13
+usbmuxd 1.1.0+48+g1cc8b34-2
+usbutils 010-1
+util-linux 2.33-2
+vi 1:070224-3
+wget 1.19.5-1
+which 2.21-3
+wpa_actiond 1.4-3
+wpa_supplicant 1:2.6-12
+x11-ssh-askpass 1.2.4.1-6
+xfsprogs 4.19.0-1
+xorg-server 1.20.3-1
+xorg-xev 1.2.2-2
+xorg-xinit 1.4.0-3
+xorg-xkill 1.0.5-1
+xorg-xprop 1.2.3-1
+xorg-xrandr 1.5.0-2
+xsel 1.2.0.20160929-2
+xterm 337-1
+youtube-dl 2018.12.09-1
+zathura-pdf-mupdf 0.3.4-1
