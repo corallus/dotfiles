@@ -9,7 +9,6 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR='vim'
-source /usr/share/nvm/init-nvm.sh
 
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh

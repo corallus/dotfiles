@@ -3,15 +3,6 @@
 
 config_version: 2
 settings:
-  backend:
-    global: webengine
-  bindings.commands:
-    global:
-      normal:
-        D: spawn --userscript ~/bin/qutemenu tab
-        d: spawn --userscript ~/bin/qutemenu open
-  content.javascript.can_open_tabs_automatically:
-    global: true
   content.register_protocol_handler:
     https://calendar.google.com/*: true
     https://mail.google.com/*: true
