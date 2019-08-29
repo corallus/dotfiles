@@ -233,3 +233,7 @@ c.colors.completion.category.border.top = 'black'
 config.bind('9', 'spawn --userscript ~/bin/qutedmenu open')
 config.bind('D', 'spawn --userscript ~/bin/qutemenu tab')
 config.bind('d', 'spawn --userscript ~/bin/qutemenu open')
+
+c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.105 Safari/537.36'
+
+
